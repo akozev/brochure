@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="brochure-wrapper flex" id="broshure"> </div>
+        <div class="ui-wrapper flex">
+            <div class="events">
+                <input name="name" placeholder="име на събитието">
+                <input name="place" placeholder="място">
+                <input name="time" type="time">
+                <input name="datetime-start" type="datetime-local">
+                <input name="datetime-finish" type="datetime-local">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lib/pixi.7.3.2.js"></script>
+    <script src="js/brochure.js"></script>
+    <script src="js/themes/sport.js"></script>
+
+    <script>
+        let brochure = new Brochure(new ThemeSport());
+
+        brochure.addEvent("1", { name: "Събитие 1", place: "Място 1", time: "17:00", datetime: [5] })
+        brochure.addEvent("2", { name: "Събитие 2", place: "Място 2", time: "13:00", datetime: [5] })
+    </script>
+</body>
+
+</html>
